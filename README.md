@@ -138,16 +138,16 @@ Parameters:
 ```javascript
 const options = {
   // Properties
-  columnsEd: Array(),      // Default: null  -- Index to editable columns. If null, all columns will be editable. Ex.: [ 0,1,2,3,4,5 ]
-  $addButton: string,      // Default: null  -- ID of "Add" button.
-  defaultValues: Array(),  // Default: null  -- Set default values, must match the number of editable columns
-  addButtonEdit: boolean,  // Default: false -- Should bootstable edit the rows after adding?
-  buttons: Object(), // Overide default buttons
-  exportCsvButton: boolean, Default: false -- add an export to CSV button
-  exportJsonButton: boolean, Default: false -- add an export to JSON button
+  columnsEd: Array(),        // Default: null  -- Index to editable columns. If null, all columns will be editable. Ex.: [ 0,1,2,3,4,5 ]
+  $addButton: string,        // Default: null  -- ID of "Add" button.
+  defaultValues: Array(),    // Default: null  -- Set default values, must match the number of editable columns
+  addButtonEdit: boolean,    // Default: false -- Should bootstable edit the rows after adding?
+  buttons: Object(),         // Overide default buttons
+  exportCsvButton: boolean,  // Default: false -- add an export to CSV button
+  exportJsonButton: boolean, // Default: false -- add an export to JSON button
 
   // Callbacks
-  onEdit: (rowElement) => {},         // Called after clicking edit button
+  onEditSave: (rowElement) => {},     // Called after clicking accept button
   onBeforeDelete: (rowElement) => {}, // Called just before deletion must return a boolean, true means row will be deleted.
   onDelete: (rowElement) => {},       // Called after deletion button, but after onBeforeDelete. If onBeforeDelete returns false, bypass.
   onAdd: (rowElement) => {}           // Called when new row is added to table
